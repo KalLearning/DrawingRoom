@@ -28,7 +28,7 @@ async def post(room:Room):
 @rt('/rooms/{id}')
 async def get(id:int):
     room = rooms[id] # gets room from database
-    canvas = Canvas(id="canvas", width="720", height="1280")
+    canvas = Canvas(id="canvas", width="1280", height="720")
     color_picker = Input(type='color', id='color-picker', value='#000000')
     brush_size = Input(type='range', id='brush-size', min='1', max='50', value='10')
     # Save button saves canvas state and sends to server
