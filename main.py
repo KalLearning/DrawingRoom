@@ -70,7 +70,7 @@ async def get(id:int):
 
 # add route for saving and loading canvas data
 @rt('/rooms/{id}/save')
-async def post(od:int, canvas_data:str):
+async def post(id:int, canvas_data:str):
     rooms.update({'canvas_data': canvas_data}, id)
     return 'Canvas Saved Successfully'
 
